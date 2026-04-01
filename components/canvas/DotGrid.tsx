@@ -362,6 +362,23 @@ const SLIDER_CSS = `
     transition: width .1s, height .1s, background .1s; }
   .hslider:active::-moz-range-thumb {
     width: 3px; height: 19px; background: rgba(255,255,255,0.95); }
+
+  @media (pointer: coarse) {
+    .hslider { height: 44px; cursor: default; touch-action: none; }
+    .hslider::-webkit-slider-thumb {
+      width: 18px; height: 18px; border-radius: 50%; margin-top: -8px;
+      background: rgba(255,255,255,0.85);
+      transition: transform .1s, background .1s; }
+    .hslider:active::-webkit-slider-thumb {
+      width: 18px; height: 18px; margin-top: -8px;
+      transform: scale(1.2);
+      background: rgba(255,255,255,0.95); }
+    .hslider::-moz-range-thumb {
+      width: 18px; height: 18px; border-radius: 50%;
+      background: rgba(255,255,255,0.85); }
+    .hslider:active::-moz-range-thumb {
+      transform: scale(1.2); background: rgba(255,255,255,0.95); }
+  }
 `
 
 function HSlider({
@@ -373,7 +390,7 @@ function HSlider({
 }) {
   const pct = `${((value - min) / (max - min)) * 100}%`
   return (
-    <label title={label} className="flex items-center gap-2 select-none flex-1 sm:flex-none">
+    <label title={label} className="flex items-center gap-2 select-none flex-1 sm:flex-none touch-none">
       <span className="text-white/50 shrink-0 flex items-center">{icon}</span>
       <input
         type="range" min={min} max={max} step={step} value={value}
