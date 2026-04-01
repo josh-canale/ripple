@@ -64,7 +64,7 @@ interface Ripple {
 }
 interface Settings  { amp: number; speed: number }
 interface TextLayer {
-  id: number; alpha: number
+  alpha: number
   phase: 'fadein' | 'hold' | 'fadeout' | 'done'
   phaseStart: number; heights: Float32Array
 }
@@ -515,7 +515,7 @@ export default function DotGrid() {
       dismissWelcome()
       textLayers.length = 0  // one text layer at a time
       const heights = rasterizeText(text, 0, 0, baseX, baseZ, DOT_COUNT)
-      textLayers.push({ id: nextId++, alpha: 0, phase: 'fadein', phaseStart: time, heights })
+      textLayers.push({ alpha: 0, phase: 'fadein', phaseStart: time, heights })
       setHasText(true)
       ripples.push({ id: nextId++, x: 0, z: 0, pinned: false, born: time, shape: 'circle' })
     }
