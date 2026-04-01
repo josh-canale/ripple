@@ -41,5 +41,3 @@ yarn-error.log*
 next-env.d.ts
 .env*.local
 
-# mediapipe wasm binaries (large, served from node_modules at runtime)
-/public/mediapipe-wasm/

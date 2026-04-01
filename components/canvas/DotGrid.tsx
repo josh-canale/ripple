@@ -338,7 +338,6 @@ function Btn({
 
 // ─── Horizontal range slider ──────────────────────────────────────────────────
 const SLIDER_CSS = `
-  @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single&display=swap');
   .hslider { -webkit-appearance: none; appearance: none;
              height: 16px; background: transparent; cursor: ew-resize; }
   .hslider::-webkit-slider-runnable-track {
@@ -813,7 +812,7 @@ export default function DotGrid() {
       {/* ── Wordmark ───────────────────────────────────────────────────────── */}
       <div className="fixed top-6 left-6 z-10 select-none pointer-events-none
                       text-white text-[18px] leading-none"
-           style={{ fontFamily: "'Bitcount Grid Single', monospace" }}>
+           style={{ fontFamily: "var(--font-bitcount), monospace" }}>
         ripple
       </div>
 
@@ -828,7 +827,7 @@ export default function DotGrid() {
         }}
       >
         <p className="text-[15px] tracking-[0.1em] font-normal whitespace-nowrap text-center leading-relaxed"
-           style={{ fontFamily: "'Bitcount Grid Single', monospace", color: '#D9E0FE' }}>
+           style={{ fontFamily: "var(--font-bitcount), monospace", color: '#D9E0FE' }}>
           <span className="sm:hidden">tap to ripple</span>
           <span className="hidden sm:inline">click to ripple</span>
           <br />
@@ -873,7 +872,7 @@ export default function DotGrid() {
               autoComplete="off" autoCorrect="off" autoCapitalize="off"
               className="bg-transparent text-white/80 text-[12px] outline-none
                          placeholder-white/20 flex-1 sm:w-36 min-w-0 caret-white/40"
-              style={{ fontFamily: "'Bitcount Grid Single', monospace" }}
+              style={{ fontFamily: "var(--font-bitcount), monospace" }}
             />
             <span className="text-white/40 text-[10px] tabular-nums shrink-0">
               {textInput.length}/10
@@ -1001,7 +1000,7 @@ export default function DotGrid() {
             onClick={e => e.stopPropagation()}
           >
             <p className="text-[15px] mb-4"
-               style={{ fontFamily: "'Bitcount Grid Single', monospace", color: '#D9E0FE' }}>
+               style={{ fontFamily: "var(--font-bitcount), monospace", color: '#D9E0FE' }}>
               export as shader
             </p>
             <p className="text-white/55 text-[12px] leading-[1.75] mb-6">
@@ -1057,7 +1056,7 @@ export default function DotGrid() {
       >
         <div className="px-4 py-4">
           <p className="text-[13px] tracking-widest mb-4 font-medium"
-             style={{ fontFamily: "'Bitcount Grid Single', monospace", color: '#D9E0FE' }}>
+             style={{ fontFamily: "var(--font-bitcount), monospace", color: '#D9E0FE' }}>
             how it works
           </p>
           <div className="flex flex-col gap-2 mb-4">

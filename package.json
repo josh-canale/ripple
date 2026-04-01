@@ -19,7 +19,6 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@types/sharp": "^0.31.1",
     "@types/three": "^0.183.1",
     "tailwindcss": "^4",
     "typescript": "^5"
