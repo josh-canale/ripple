@@ -856,7 +856,7 @@ export default function DotGrid() {
       {/* ── Bottom-centre UI ───────────────────────────────────────────────── */}
       <div className="fixed bottom-6 sm:bottom-10
                       left-2 right-2 sm:left-1/2 sm:right-auto sm:-translate-x-1/2
-                      z-10 flex flex-col items-center gap-3">
+                      z-10 flex flex-col items-start sm:items-center gap-3">
 
         {/* Text input panel */}
         <div
@@ -918,7 +918,7 @@ export default function DotGrid() {
           style={{
             opacity:       open ? 1 : 0,
             transform:     open ? 'translateY(0) scale(1)' : 'translateY(10px) scale(0.97)',
-            maxHeight:     open ? 96 : 0,
+            maxHeight:     open ? 130 : 0,
             pointerEvents: open ? 'auto' : 'none',
             overflow:      'hidden',
             transition: [
@@ -928,7 +928,7 @@ export default function DotGrid() {
             ].join(', '),
           }}
         >
-          <div className="flex flex-wrap sm:flex-nowrap items-center justify-center
+          <div className="flex flex-wrap sm:flex-nowrap items-center justify-between sm:justify-center
                           w-full sm:w-auto
                           gap-x-1 gap-y-2 sm:gap-x-3
                           px-2 sm:px-5 py-2 sm:py-3
